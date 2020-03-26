@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>1337</title>
-	<link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
-	<link rel="stylesheet" href="./123.css" />
-	<style type="text/css">
-		@font-face {
+ <title>1337</title>
+ <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+ <link rel="stylesheet" href="./123.css" />
+ <style type="text/css">
+@font-face {
     font-family: Hacked;
     src: url(./fonts/HACKED.ttf);
 }
@@ -23,7 +23,7 @@ h2{
 	font-size: 2em;
 	color:white;
 }
-	body {
+body {
   background: black;
   font-family: 'Hacked';
 }
@@ -51,7 +51,7 @@ strong{
  font-size: 36px;
  color:white;
 }
-	</style>
+</style>
 <script type="text/javascript">
  var audio = new Audio('i_wish_you_good_luck.mp3');
  audio.volume=0.2
@@ -95,29 +95,23 @@ strong{
   (function(url) {
   // Create a new `Image` instance
   var image = new Image();
-
   image.onload = function() {
     // Inside here we already have the dimensions of the loaded image
     var style = [
       // Hacky way of forcing image's viewport using `font-size` and `line-height`
       'font-size: 1px;',
       'line-height: ' + this.height + 'px;',
-
       // Hacky way of forcing a middle/center anchor point for the image
       'padding: ' + this.height * .5 + 'px ' + this.width * .5 + 'px;',
-
       // Set image dimensions
       'background-size: ' + this.width + 'px ' + this.height + 'px;',
-
       // Set image URL
       'background: no-repeat url('+ url +');'
      ].join(' ');
-
      // notice the space after %c
      console.log('%c ', style);
      console.log("Look up")
   };
-
   // Actually loads the image
   image.src = url;
 })('https://qwertyforce.ru/rd.png');
@@ -131,53 +125,54 @@ console.log("LORN - Ø")
 console.log("https://www.deviantart.com/yoditax/art/Rainbow-Dash-is-God-266920155")
 const c = document.getElementById("stars");
 const x = c.getContext('2d');
-var www = window.innerWidth
-var hhh = window.innerHeight
-c.width = www; 
-c.height = hhh; 
-var FPS=60
- var S = Math.sin;
-    var C = Math.cos;
-    var T = Math.tan;
-    function R(r,g,b,a) {
-      a = a === undefined ? 1 : a;
-      return "rgba("+(r|0)+","+(g|0)+","+(b|0)+","+a+")";
-    }
-  
-    var time = 0;
-    var frame = 0;
-    var nextFrameMs = 0;
-    function u(t) {
-      x.fillRect(0,0,i=w=c.width=www,hhh);
-      x.fillStyle="#fff";
-
-      for(;i--;){
-
-        T=t*99;
-        z=w*99/(i-T%1);
-        a=i+T-T%1;
-        x.fillRect(C(a*a)*z+www/2,C(a*w)*z+hhh/2,w/i,w/i)
-    }
-    }
- function loop(frame_time) {
-        requestAnimationFrame(loop);
-        epsilon = 1.5; // Acounts for different timestamp resolution and slight jitter
-        if (frame_time < nextFrameMs - epsilon) {
-          return;  // Skip this cycle as we are animating too quickly.
-        }
-        nextFrameMs = Math.max(nextFrameMs + 1000 / FPS, frame_time);
-
-      time = frame/FPS;
-      if(time * FPS | 0 == frame - 1){
-        time += 0.000001;
-      }
-      frame++;
-      try {
-        u(time);
-      } catch (e) {
-        throw e;
-      }
-    }
- loop(0.0)
+var width = window.innerWidth;
+var height = window.innerHeight;
+c.width = width;
+c.height = height;
+var FPS = 60;
+var S = Math.sin;
+var C = Math.cos;
+var time = 0;
+var frame = 0;
+var nextFrameMs = 0;
+function u(t) {
+  let T = 0;
+  let z = 0;
+  let a = 0;
+  let i = width;
+  x.fillStyle = "#000";
+  x.fillRect(0, 0, width, height);
+  x.fillStyle = "#fff";
+  for (; i--; ) {
+    T = t * 99;
+    z = (width * 99) / (i - (T % 1));
+    a = i + T - (T % 1);
+    x.fillRect(
+      C(a * a) * z + width / 2,
+      C(a * width) * z + height / 2,
+      width / i,
+      width / i
+    );
+  }
+}
+function loop(frame_time) {
+  requestAnimationFrame(loop);
+  epsilon = 1.5; // Acounts for different timestamp resolution and slight jitter
+  if (frame_time < nextFrameMs - epsilon) {
+    return; // Skip this cycle as we are animating too quickly.
+  }
+  nextFrameMs = Math.max(nextFrameMs + 1000 / FPS, frame_time);
+  time = frame / FPS;
+  if ((time * FPS) | (0 == frame - 1)) {
+    time += 0.000001;
+  }
+  frame++;
+  try {
+    u(time);
+  } catch (e) {
+    throw e;
+  }
+}
+loop(0.0);
 </script>
 </html>
