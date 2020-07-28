@@ -62,22 +62,27 @@
   </style>
   <script type="text/javascript">
     var audio = new Audio('i_wish_you_good_luck.mp3');
-    audio.volume = 0.15
-    function diasble_alert() {
-      document.getElementById("music").style.display = "none";
-      audio.play();
-    }
-    window.onload = function () {
-      loop(0.0)
-    }
+      audio.volume = 0.15
+      document.addEventListener('click', function (e) {
+        if (e.target.id !== "projects") {
+          play_music()
+        }
+      }, false);
+      function play_music() {
+        document.getElementById("music").style.display = "none";
+        audio.play();
+      }
+      window.onload = function () {
+        loop(0.0)
+      }
   </script>
 </head>
 
-<body onclick="diasble_alert()">
+<body>
   <canvas id="stars" style="position: fixed;">Error, canvas is not supported</canvas>
 
-  <div style="position: absolute;float: left;color:white;">
-    <a href="./projects.html" target="_blank"><strong class="experiment-title"
+  <div  id="projects"  style="position: absolute;float: left;color:white;">
+    <a id="projects" href="./projects.html" target="_blank"><strong id="projects"  class="experiment-title"
         style="line-height: 20px;padding-right: 3px">projects</strong></a>
   </div>
   <div id="music" style="position: absolute;float: left;color:white;bottom: 0;display: block;">
