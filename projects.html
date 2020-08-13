@@ -3,6 +3,7 @@
 
 <head>
   <title>Projects</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet"
     href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
   <link rel="stylesheet" href="./123.css" />
@@ -51,6 +52,8 @@
       border-style: solid;
       border-color: white;
       margin-top: 15px;
+      margin-left:5px;
+      margin-right:5px;
       background: #000000b3;
       margin-bottom: 5px;
       z-index: 999;
@@ -65,17 +68,17 @@
 
 <body>
   <canvas id="stars" style="position: fixed;">Error, canvas is not supported</canvas>
-  <div style="position: absolute;float: left;color:white;">
+  <div style="position: fixed;z-index: 9999;color:white;">
     <a href="./index.html" target="_blank"><strong class="experiment-title" style="line-height: 20px;">back</strong></a>
   </div>
 
-  <div id="container" style="justify-content: flex-start">
+  <div id="container" style="display: inline-flex;">
     <div class="block">
       <h2><strong>Gomoku AI</strong></h2>
       <h2>MCTS/negamax/negascout/MTD(f) in Gomoku</h2>
       <h2>Sources:</h2>
       <a href="https://github.com/qwertyforce/gomoku_ai" target="_blank">
-        <h2>Backend</h2>
+        <h2>Backend(JS)</h2>
       </a>
     </div>
 
@@ -86,10 +89,10 @@
       <h2>PWA note app. Supports sync and offline work</h2>
       <h2>Sources:</h2>
       <a href="https://github.com/qwertyforce/note_app" target="_blank">
-        <h2>Frontend</h2>
+        <h2>Frontend(React)</h2>
       </a>
       <a href="https://github.com/qwertyforce/note_app_backend" target="_blank">
-        <h2>Backend</h2>
+        <h2>Backend(Node.js)</h2>
       </a>
     </div>
 
@@ -100,7 +103,7 @@
       <h2>Online polls</h2>
       <h2>Sources:</h2>
       <a href="https://github.com/qwertyforce/poll" target="_blank">
-        <h2>Frontend/Backend</h2>
+        <h2>Frontend/Backend(React/Node.js)</h2>
       </a>
     </div>
 
@@ -115,7 +118,7 @@
       </a>
       <h2>Sources:</h2>
       <a href="https://github.com/qwertyforce/one-time-url-shortener" target="_blank">
-        <h2>Frontend/Backend/Chrome extension</h2>
+        <h2>Frontend/Backend/Chrome extension(Node.js)</h2>
       </a>
     </div>
 
@@ -126,7 +129,7 @@
       <h2>File sharing service</h2>
       <h2>Sources:</h2>
       <a href="https://github.com/qwertyforce/file-sharing-service" target="_blank">
-        <h2>Frontend/Backend</h2>
+        <h2>Frontend/Backend(Node.js)</h2>
       </a>
     </div>
     <div class="block">
@@ -136,13 +139,13 @@
       <h2>Multiplayer 21x21 Gomoku. Also you can play against AI</h2>
       <h2>Sources:</h2>
       <a href="https://github.com/qwertyforce/tictactoeX" target="_blank">
-        <h2>Frontend</h2>
+        <h2>Frontend(Vue)</h2>
       </a>
       <a href="https://github.com/qwertyforce/tictactoeX_backend" target="_blank">
-        <h2>Backend</h2>
+        <h2>Backend(Go/Node.js)</h2>
       </a>
       <a href="https://github.com/qwertyforce/gomoku_ai" target="_blank">
-        <h2>Gomoku AI</h2>
+        <h2>Gomoku AI (JS)</h2>
       </a>
     </div>
     <div class="block">
@@ -152,7 +155,7 @@
       <h2>Torrent file to magnet link converter</h2>
       <h2>Sources:</h2>
       <a href="https://github.com/qwertyforce/t2m" target="_blank">
-        <h2>Frontend/Backend</h2>
+        <h2>Frontend/Backend(Node.js)</h2>
       </a>
     </div>
     <div class="block">
@@ -162,7 +165,7 @@
       <h2>discord bot that searches image on derpibooru</h2>
       <h2>Sources:</h2>
       <a href="https://github.com/qwertyforce/derpi_search" target="_blank">
-        <h2>Backend</h2>
+        <h2>Backend(Node.js)</h2>
       </a>
     </div>
     <div class="block">
@@ -170,7 +173,7 @@
       <h2>nuff said</h2>
       <h2>Sources:</h2>
       <a href="https://github.com/qwertyforce/socks5_proxy_checker" target="_blank">
-        <h2>Backend</h2>
+        <h2>Backend(Node.js)</h2>
       </a>
     </div>
     <div class="block">
@@ -180,7 +183,7 @@
       </h2>
       <h2>Sources:</h2>
       <a href="https://github.com/qwertyforce/4chan_tg" target="_blank">
-        <h2>Backend</h2>
+        <h2>Backend(Node.js)</h2>
       </a>
     </div>
     <div class="block">
@@ -190,7 +193,7 @@
       <h2>url shortener</h2>
       <h2>Sources:</h2>
       <a href="https://github.com/qwertyforce/url_shortener" target="_blank">
-        <h2>Frontend/Backend</h2>
+        <h2>Frontend/Backend(React/Node.js)</h2>
       </a>
     </div>
     <div class="block">
@@ -200,7 +203,7 @@
       <h2>server monitoring tool</h2>
       <h2>Sources:</h2>
       <a href="https://github.com/qwertyforce/status" target="_blank">
-        <h2>Frontend/Backend</h2>
+        <h2>Frontend/Backend(React/Node.js)</h2>
       </a>
     </div>
      <div class="block">
@@ -208,7 +211,7 @@
       <h2>Node.js module for cloudflare firewall api (block,challenge,js challenge)</h2>
       <h2>Sources:</h2>
       <a href="https://github.com/qwertyforce/cloudflare_ban" target="_blank">
-        <h2>Backend</h2>
+        <h2>Backend(Node.js)</h2>
       </a>
       <a href="https://www.npmjs.com/package/cloudflare_ban" target="_blank">
         <h2>npm</h2>
@@ -220,7 +223,7 @@
       <h2>text generation using markov chains</h2>
       <h2>Sources:</h2>
       <a href="https://github.com/qwertyforce/markov_chain_text_generator" target="_blank">
-        <h2>Backend</h2>
+        <h2>Backend(Node.js)</h2>
       </a>
     </div>
 
@@ -229,7 +232,17 @@
       <h2>gomoku_ai rewritten in c++</h2>
       <h2>Sources:</h2>
       <a href="https://github.com/qwertyforce/gomoku_ai_c" target="_blank">
-        <h2>Backend</h2>
+        <h2>Backend(C++)</h2>
+      </a>
+    </div>
+    <div class="block">
+      <a href="https://blog.qwertyforce.dev/" target="_blank">
+        <h2><strong>blog.qwertyforce.dev</strong></h2>
+      </a>
+      <h2>blog</h2>
+      <h2>Sources:</h2>
+      <a href="https://github.com/qwertyforce/blog" target="_blank">
+        <h2>Frontend(Next.js)</h2>
       </a>
     </div>
 
@@ -259,7 +272,7 @@
       };
       // Actually loads the image
       image.src = url;
-    })('https://qwertyforce.ru/rd.png');
+    })('https://qwertyforce.dev/rd.png');
 </script>
 <script type="text/javascript">
   console.log("Credits")

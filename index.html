@@ -5,6 +5,7 @@
   <title>1337</title>
   <link rel="stylesheet"
     href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./123.css" />
   <style type="text/css">
     @font-face {
@@ -64,7 +65,7 @@
     var audio = new Audio('i_wish_you_good_luck.mp3');
       audio.volume = 0.15
       document.addEventListener('click', function (e) {
-        if (e.target.id !== "projects") {
+        if (e.target.id !== "projects" && e.target.id !== "blog") {
           play_music()
         }
       }, false);
@@ -81,11 +82,15 @@
 <body>
   <canvas id="stars" style="position: fixed;">Error, canvas is not supported</canvas>
 
-  <div  id="projects"  style="position: absolute;float: left;color:white;">
+  <div  id="projects"  style="position: absolute;color:white;">
     <a id="projects" href="./projects.html" target="_blank"><strong id="projects"  class="experiment-title"
         style="line-height: 20px;padding-right: 3px">projects</strong></a>
   </div>
-  <div id="music" style="position: absolute;float: left;color:white;bottom: 0;display: block;">
+  <div  id="blog"  style="position: absolute;right:0;color:white;">
+    <a id="blog" href="https://blog.qwertyforce.dev" target="_blank"><strong id="blog"  class="experiment-title"
+        style="line-height: 20px;padding-right: 3px">blog</strong></a>
+  </div>
+  <div id="music" style="position: absolute;color:white;bottom: 0;display: block;">
     <strong class="experiment-title" style="line-height: 20px;">click anywhere to turn music on</strong>
   </div>
   <div id="container">
@@ -129,7 +134,7 @@
       };
       // Actually loads the image
       image.src = url;
-    })('https://qwertyforce.ru/rd.png');
+    })('https://qwertyforce.dev/rd.png');
 </script>
 <script type="text/javascript">
   console.log("Credits")
