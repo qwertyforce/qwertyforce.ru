@@ -65,7 +65,7 @@
     var audio = new Audio('i_wish_you_good_luck.mp3');
       audio.volume = 0.15
       document.addEventListener('click', function (e) {
-        if (e.target.id !== "projects" && e.target.id !== "blog") {
+        if (e.target.id !== "projects" && e.target.id !== "blog" && e.target.id !== "footer") {
           play_music()
         }
       }, false);
@@ -106,8 +106,8 @@
   </div>
   <div class="footer">
     <div>
-      <a href="https://github.com/qwertyforce" target="_blank"><i class="lab la-github icn"></i></a>
-      <a href="http://t.me/qwertyforce" target="_blank"><i class="lab la-telegram icn"></i></a>
+      <a id="footer" href="https://github.com/qwertyforce" target="_blank"><i id="footer" class="lab la-github icn"></i></a>
+      <a id="footer" href="http://t.me/qwertyforce" target="_blank"><i id="footer" class="lab la-telegram icn"></i></a>
     </div>
   </div>
 </body>
