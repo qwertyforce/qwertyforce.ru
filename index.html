@@ -143,13 +143,16 @@
   console.log("https://www.deviantart.com/yoditax/art/Rainbow-Dash-is-God-266920155")
 
   const c = document.getElementById("stars");
+  c.style.width = window.innerWidth + "px";
+c.style.height = window.innerHeight + "px";
+ const scale=2
   window.onresize = () => {
-    c.width = window.innerWidth;
-    c.height = window.innerHeight;
+    c.width = window.innerWidth*scale;
+    c.height = window.innerHeight*scale;
   }
   const x = c.getContext('2d');
-  c.width = window.innerWidth;
-  c.height = window.innerHeight;
+  c.width = window.innerWidth*scale;
+  c.height = window.innerHeight*scale;
   const FPS = 60;
   const S = Math.sin;
   const C = Math.cos;
