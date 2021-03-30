@@ -144,11 +144,13 @@
 
   const c = document.getElementById("stars");
   c.style.width = window.innerWidth + "px";
-c.style.height = window.innerHeight + "px";
- const scale=2
+  c.style.height = window.innerHeight + "px";
+  const scale = 2
   window.onresize = () => {
-    c.width = window.innerWidth*scale;
-    c.height = window.innerHeight*scale;
+    c.style.width = window.innerWidth + "px";
+    c.style.height = window.innerHeight + "px";
+    c.width = window.innerWidth * scale;
+    c.height = window.innerHeight * scale;
   }
   const x = c.getContext('2d');
   c.width = window.innerWidth*scale;
@@ -168,7 +170,7 @@ c.style.height = window.innerHeight + "px";
     x.fillRect(0, 0, c.width, c.height);
     x.fillStyle = "#fff";
     for (; i--;) {
-      T = t * 99;
+      T = t * 150;
       z = (c.width * 99) / (i - (T % 1));
       a = i + T - (T % 1);
       x.fillRect(
