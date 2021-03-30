@@ -160,19 +160,19 @@
     let T = 0;
     let z = 0;
     let a = 0;
-    let i = window.innerWidth;
+    let i = c.width;
     x.fillStyle = "#000";
-    x.fillRect(0, 0, window.innerWidth, window.innerHeight);
+    x.fillRect(0, 0, c.width, c.height);
     x.fillStyle = "#fff";
     for (; i--;) {
       T = t * 99;
-      z = (window.innerWidth * 99) / (i - (T % 1));
+      z = (c.width * 99) / (i - (T % 1));
       a = i + T - (T % 1);
       x.fillRect(
-        C(a * a) * z + window.innerWidth / 2,
-        C(a * window.innerWidth) * z + window.innerHeight / 2,
-        window.innerWidth / i,
-        window.innerWidth / i
+        C(a * a) * z + c.width / 2,
+        C(a * c.width) * z + c.height / 2,
+        c.width / i,
+        c.width / i
       );
     }
   }
