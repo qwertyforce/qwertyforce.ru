@@ -2,32 +2,17 @@
 <html>
 
 <head>
-  <title>Projects</title>
+  <title>More</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet"
-    href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
-  <link rel="stylesheet" href="./123.css" />
+  <link rel="preload" href="./fonts/PixelOperatorMono-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/PixelOperatorMono.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="./123.css" as="style" />
   <style type="text/css">
-    @font-face {
-      font-family: PixelOperatorBold;
-      src: url(./PixelOperatorMono-Bold.ttf);
-    }
-
-    @font-face {
-      font-family: PixelOperator;
-      src: url(./PixelOperatorMono.ttf);
-    }
-
     h2 {
       font-family: PixelOperatorBold, monospace;
       font-size: 1.5em;
       color: white;
       margin: 0;
-    }
-
-    html,
-    body {
-      background: black;
     }
 
     strong {
@@ -40,30 +25,7 @@
       font-style: initial;
       font-family: PixelOperator;
     }
-
-    .icn {
-      font-size: 36px;
-      color: white;
-    }
-
-    .block {
-      padding: 5px;
-      border-width: thin;
-      border-style: solid;
-      border-color: white;
-      margin-top: 15px;
-      margin-left:5px;
-      margin-right:5px;
-      background: #000000b3;
-      margin-bottom: 5px;
-      z-index: 999;
-    }
   </style>
-  <script type="text/javascript">
-    window.onload = function () {
-      loop(0.0)
-    }
-  </script>
 </head>
 
 <body>
@@ -83,94 +45,7 @@
       </a>
     </div>
   </div>
-  </body>
-<script type="text/javascript">
-
-    (function (url) {
-      // Create a new `Image` instance
-      var image = new Image();
-      image.onload = function () {
-        // Inside here we already have the dimensions of the loaded image
-        var style = [
-          // Hacky way of forcing image's viewport using `font-size` and `line-height`
-          'font-size: 1px;',
-          'line-height: ' + this.height + 'px;',
-          // Hacky way of forcing a middle/center anchor point for the image
-          'padding: ' + this.height * .5 + 'px ' + this.width * .5 + 'px;',
-          // Set image dimensions
-          'background-size: ' + this.width + 'px ' + this.height + 'px;',
-          // Set image URL
-          'background: no-repeat url(' + url + ');'
-        ].join(' ');
-        // notice the space after %c
-        console.log('%c ', style);
-        console.log("Look up")
-      };
-      // Actually loads the image
-      image.src = url;
-    })('https://qwertyforce.dev/rd.png');
-</script>
-<script type="text/javascript">
-  console.log("Credits")
-  console.log("https://codepen.io/FelixRilling/details/vNJoMy")
-  console.log("https://codepen.io/lukemeyrick/pen/ayRgWO")
-  console.log("https://www.dwitter.net/d/5165")
-  console.log("LORN - Ø")
-  console.log("https://www.deviantart.com/yoditax/art/Rainbow-Dash-is-God-266920155")
-
-  const c = document.getElementById("stars");
-  window.onresize = () => {
-    c.width = window.innerWidth;
-    c.height = window.innerHeight;
-  }
-  const x = c.getContext('2d');
-  c.width = window.innerWidth;
-  c.height = window.innerHeight;
-  const FPS = 60;
-  const S = Math.sin;
-  const C = Math.cos;
-  let time = 0;
-  let frame = 0;
-  let nextFrameMs = 0;
-  function u(t) {
-    let T = 0;
-    let z = 0;
-    let a = 0;
-    let i = window.innerWidth;
-    x.fillStyle = "#000";
-    x.fillRect(0, 0, window.innerWidth, window.innerHeight);
-    x.fillStyle = "#fff";
-    for (; i--;) {
-      T = t * 99;
-      z = (window.innerWidth * 99) / (i - (T % 1));
-      a = i + T - (T % 1);
-      x.fillRect(
-        C(a * a) * z + window.innerWidth / 2,
-        C(a * window.innerWidth) * z + window.innerHeight / 2,
-        window.innerWidth / i,
-        window.innerWidth / i
-      );
-    }
-  }
-  function loop(frame_time) {
-    requestAnimationFrame(loop);
-    epsilon = 1.5; // Acounts for different timestamp resolution and slight jitter
-    if (frame_time < nextFrameMs - epsilon) {
-      return; // Skip this cycle as we are animating too quickly.
-    }
-    nextFrameMs = Math.max(nextFrameMs + 1000 / FPS, frame_time);
-    time = frame / FPS;
-    if ((time * FPS) | (0 == frame - 1)) {
-      time += 0.000001;
-    }
-    frame++;
-    try {
-      u(time);
-    } catch (e) {
-      throw e;
-    }
-  }
-  loop(0.0);
-</script>
+  <script src="./main.js"></script>
+</body>
 
 </html>

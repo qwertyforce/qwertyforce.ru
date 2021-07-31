@@ -2,33 +2,20 @@
 <html>
 
 <head>
-  <title>1337</title>
-  <link rel="stylesheet"
-    href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./123.css" />
+  <title>qwerty</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preload" href="./fonts/HACKED.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/PixelOperatorMono-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/PixelOperatorMono.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/brands.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="./123.css" as="style" />
   <style type="text/css">
-    @font-face {
-      font-family: Hacked;
-      src: url(./fonts/HACKED.ttf);
-    }
-    @font-face {
-      font-family: PixelOperatorBold;
-      src: url(./PixelOperatorMono-Bold.ttf);
-    }
-    @font-face {
-      font-family: PixelOperator;
-      src: url(./PixelOperatorMono.ttf);
-    }
     h2 {
       font-family: PixelOperatorBold, monospace;
       font-size: 2em;
       color: white;
     }
-    body {
-      background: black;
-      font-family: 'Hacked';
-    }
+
     strong {
       display: inline-block;
       line-height: 40px;
@@ -39,6 +26,7 @@
       font-style: initial;
       font-family: PixelOperator;
     }
+
     .footer {
       position: fixed;
       width: 100vw;
@@ -49,39 +37,22 @@
       flex-direction: row;
       justify-content: center;
     }
+
     .icn {
       font-size: 36px;
       color: white;
     }
   </style>
-  <script type="text/javascript">
-    var audio = new Audio('i_wish_you_good_luck.mp3');
-    const links=['projects','blog','footer','more']
-      audio.volume = 0.15
-      document.addEventListener('click', function (e) {
-        if (!links.includes(e.target.id)) {
-          play_music()
-        }
-      }, false);
-      function play_music() {
-        document.getElementById("music").style.display = "none";
-        audio.play();
-      }
-      window.onload = function () {
-        loop(0.0)
-      }
-  </script>
 </head>
 
 <body>
   <canvas id="stars" style="position: fixed;">Error, canvas is not supported</canvas>
-
-  <div  id="projects"  style="position: absolute;color:white;">
-    <a id="projects" href="./projects.html"><strong id="projects"  class="experiment-title"
+  <div id="projects" style="position: absolute;color:white;">
+    <a id="projects" href="./projects.html"><strong id="projects" class="experiment-title"
         style="line-height: 20px;padding-right: 3px">projects</strong></a>
   </div>
-  <div  id="blog"  style="position: absolute;right:0;color:white;">
-    <a id="blog" href="https://blog.qwertyforce.dev"><strong id="blog"  class="experiment-title"
+  <div id="blog" style="position: absolute;right:0;color:white;">
+    <a id="blog" href="https://blog.qwertyforce.dev"><strong id="blog" class="experiment-title"
         style="line-height: 20px;padding-right: 3px">blog</strong></a>
   </div>
   <div id="music" style="position: absolute;color:white;bottom: 0;display: block;">
@@ -99,107 +70,19 @@
 
   </div>
   <div class="footer">
-    <div  id="more"  style="position: absolute;bottom: 0;right:0;color:white;">
-      <a id="more" href="./more.html" ><strong id="more"  class="experiment-title"
+    <div id="more" style="position: absolute;bottom: 0;right:0;color:white;">
+      <a id="more" href="./more.html"><strong id="more" class="experiment-title"
           style="line-height: 20px;padding-right: 3px">more</strong></a>
     </div>
     <div>
-      <a id="footer" href="https://github.com/qwertyforce" target="_blank"><i id="footer" class="lab la-github icn"></i></a>
+      <a id="footer" href="https://github.com/qwertyforce" target="_blank"><i id="footer"
+          class="lab la-github icn"></i></a>
       <a id="footer" href="http://t.me/qwertyforce" target="_blank"><i id="footer" class="lab la-telegram icn"></i></a>
     </div>
   </div>
+  <script src="./main.js"></script>
+  <script src="./music.js"></script>
+  <script src="./easter_egg.js"></script>
 </body>
-<script type="text/javascript">
-    (function (url) {
-      // Create a new `Image` instance
-      var image = new Image();
-      image.onload = function () {
-        // Inside here we already have the dimensions of the loaded image
-        var style = [
-          // Hacky way of forcing image's viewport using `font-size` and `line-height`
-          'font-size: 1px;',
-          'line-height: ' + this.height + 'px;',
-          // Hacky way of forcing a middle/center anchor point for the image
-          'padding: ' + this.height * .5 + 'px ' + this.width * .5 + 'px;',
-          // Set image dimensions
-          'background-size: ' + this.width + 'px ' + this.height + 'px;',
-          // Set image URL
-          'background: no-repeat url(' + url + ');'
-        ].join(' ');
-        // notice the space after %c
-        console.log('%c ', style);
-        console.log("Look up")
-      };
-      // Actually loads the image
-      image.src = url;
-    })('https://qwertyforce.dev/rd.png');
-</script>
-<script type="text/javascript">
-  console.log("Credits")
-  console.log("https://codepen.io/FelixRilling/details/vNJoMy")
-  console.log("https://codepen.io/lukemeyrick/pen/ayRgWO")
-  console.log("https://www.dwitter.net/d/5165")
-  console.log("LORN - Ø")
-  console.log("https://www.deviantart.com/yoditax/art/Rainbow-Dash-is-God-266920155")
-
-  const c = document.getElementById("stars");
-  c.style.width = window.innerWidth + "px";
-  c.style.height = window.innerHeight + "px";
-  const scale = 2
-  window.onresize = () => {
-    c.style.width = window.innerWidth + "px";
-    c.style.height = window.innerHeight + "px";
-    c.width = window.innerWidth * scale;
-    c.height = window.innerHeight * scale;
-  }
-  const x = c.getContext('2d');
-  c.width = window.innerWidth*scale;
-  c.height = window.innerHeight*scale;
-  const FPS = 60;
-  const S = Math.sin;
-  const C = Math.cos;
-  let time = 0;
-  let frame = 0;
-  let nextFrameMs = 0;
-  function u(t) {
-    let T = 0;
-    let z = 0;
-    let a = 0;
-    let i = c.width;
-    x.fillStyle = "#000";
-    x.fillRect(0, 0, c.width, c.height);
-    x.fillStyle = "#fff";
-    for (; i--;) {
-      T = t * 150;
-      z = (c.width * 99) / (i - (T % 1));
-      a = i + T - (T % 1);
-      x.fillRect(
-        C(a * a) * z + c.width / 2,
-        C(a * c.width) * z + c.height / 2,
-        c.width / i,
-        c.width / i
-      );
-    }
-  }
-  function loop(frame_time) {
-    requestAnimationFrame(loop);
-    epsilon = 1.5; // Acounts for different timestamp resolution and slight jitter
-    if (frame_time < nextFrameMs - epsilon) {
-      return; // Skip this cycle as we are animating too quickly.
-    }
-    nextFrameMs = Math.max(nextFrameMs + 1000 / FPS, frame_time);
-    time = frame / FPS;
-    if ((time * FPS) | (0 == frame - 1)) {
-      time += 0.000001;
-    }
-    frame++;
-    try {
-      u(time);
-    } catch (e) {
-      throw e;
-    }
-  }
-  loop(0.0);
-</script>
 
 </html>
